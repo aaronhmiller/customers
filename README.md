@@ -15,4 +15,5 @@ To build and tag a new image, clone this repo and:
 docker build -t <your_docker_hub_account>/customers:1.0 -t <your_docker_hub_account>/customers:latest .
 ```
 
-Once you tag and build, upload to `hub.docker.com`: `docker push <your_docker_hub_account>/customers`
+Once you tag and build, upload to `hub.docker.com`: `docker push <your_docker_hub_account>/customers:latest <your_docker_hub_account>/customers:1.0`
+
