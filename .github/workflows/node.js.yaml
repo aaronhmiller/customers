@@ -33,7 +33,7 @@ jobs:
     - name: Test app
       run: | 
         NAME=$(docker run --network host saltaaron/just-httpie GET :3000/customers/7 | docker run -i --network host saltaaron/just-jq -r .name)
-        if [ "$NAME" != 'Nick Foo' ] ; then
+        if [ "$NAME" != 'Nick Charm' ] ; then
           echo "The expected name was not returned. $NAME was returned instead."
           exit 1;
         fi
