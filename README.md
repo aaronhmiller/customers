@@ -1,3 +1,4 @@
+[![Node.js CI](https://github.com/aaronhmiller/customers/actions/workflows/node.js.yaml/badge.svg)](https://github.com/aaronhmiller/customers/actions/workflows/node.js.yaml)
 # customers
 Dockerized Node.js Express application framework for crude API testing purposes
 
