@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const os = require('os')
 
 let customers = [ 
   { id: 1, name: 'Mary Smith', accounts: 0 },
@@ -10,26 +11,33 @@ let customers = [
   { id: 6, name: 'George Lee', accounts: 62 },
   { id: 7, name: 'Nick Charm', accounts: 27 },
   { id: 8, name: 'Karen Thomas', accounts: 14 },
+  { id: 9, name: 'Johan Krebs', accounts: 3 },
+  { id: 10, name: 'Darlene Phillips', accounts: 7 },
 ];
+
+app.get('/', (req, res) => {
+  res.json({ info: 'Node.js & Express on ' + `${os.arch}` })
+})
+
  
 app.get('/customers', (req, res) => {
-  return res.send(customers);
+  res.json(customers);
 });
 
 app.get('/customers/:id', (req, res) => {
-  return res.send(customers[req.params.id-1]);
+  res.json(customers[req.params.id-1]);
 });
 
 app.post('/customers/:id', (req, res) => {
-  return res.send("POSTed");
+  res.json("POSTed");
 });
 
 app.put('/customers/:id', (req, res) => {
-  return res.send("PUT");
+  res.json("PUT");
 });
 
 app.patch('/customers/:id', (req, res) => {
-  return res.send("PATCHed");
+  res.json("PATCHed");
 });
 
 const port = process.env.PORT || 3000;
