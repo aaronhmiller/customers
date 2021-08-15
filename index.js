@@ -16,7 +16,7 @@ let customers = [
 ];
 
 app.get('/', (req, res) => {
-  res.json({ info: 'Node.js & Express on ' + `${os.arch}` })
+  res.json({ info: 'Node.js and Express on ' + `${os.arch}` })
 })
 
  
