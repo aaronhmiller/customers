@@ -8,6 +8,10 @@ Dockerized Node.js Express application framework for crude API testing purposes
 Alternatively, use its more portable form and run it as a Docker Container:
 `docker run -d --rm --name customers -p 3000:3000 saltaaron/customers`
 
+#### Shoud you receive an error about express missing
+
+run `npm install`
+
 ## Building
 
 To build, tag and push  a new image, clone this repo and:
